@@ -1,0 +1,27 @@
+{
+  "name": "Hikari",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.3.1",
+    "react-native": "0.55.2",
+    "react-native-ionicons": "^0.2.1",
+    "react-native-textinput-effects": "^0.4.2",
+    "react-native-youtube": "^1.1.0",
+    "react-navigation": "^1.5.11",
+    "react-navigation-slide-from-right-transition": "^1.0.4"
+  },
+  "devDependencies": {
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.4.3",
+    "react-test-renderer": "16.3.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
