@@ -8,6 +8,7 @@ import LyricsScreen from './LyricsScreen'; //memanggil file LyricsScreen
 import LoginScreen from './LoginScreen';
 import ArtistScreen from './ArtistScreen';
 import AddScreen from './AddScreen';
+import ProfileScreen from './ProfileScreen';
 
 import Icon from 'react-native-ionicons'
 
@@ -42,6 +43,15 @@ const AddStack = StackNavigator({
     }
 });
 
+const ProfileStack = StackNavigator({
+  Profile: { screen: ProfileScreen },
+  Add: { screen: AddScreen },
+  }, {
+    navigationOptions: {
+      header: false,
+    }
+});
+
 const TopStack = StackNavigator({
   Top: { screen: TopScreen }, //memanggil class TopScreen yang ada di file TopScreen
   }, {
@@ -69,7 +79,7 @@ const ScreenTab =  TabNavigator(
     Lyrics: { screen: LyricsStack }, //memanggil stack navigator LyricsStack
     Artist: { screen: ArtistStack }, //memanggil stack navigator Artist
 
-    Add: { screen: AddStack }, //memanggil stack navigator LyricsStack
+    Profile: { screen: ProfileStack }, //memanggil stack navigator LyricsStack
   },
   {
     navigationOptions: ({ navigation }) => ({
@@ -83,8 +93,8 @@ const ScreenTab =  TabNavigator(
         } else if (routeName === 'Artist') {
           iconName = 'md-person';
         }
-        else if (routeName === 'Add') {
-          iconName = 'md-add';
+        else if (routeName === 'Profile') {
+          iconName = 'md-contact';
         }
         return <Icon android={iconName} size={25} color={tintColor} />;
       },

@@ -5,28 +5,10 @@ import Icon from 'react-native-ionicons';
 
 import { Kaede } from 'react-native-textinput-effects';
 
-//Data Screen
-class LogoTitle extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems:'center', justifyContent: 'center' }}>
-        <Image
-          source={require('./assets/spiro.png')}
-          style={{width: 30, height: 30, tintColor: '#2196F3'  }}
-        />
-      </View>
-    );
-  }
-}
-
 export default class DataScreen extends React.Component {
-  static navigationOptions = {
-    headerTitle: <LogoTitle />,
-  };
-
-    constructor()
+    constructor(props)
       {
-          super();
+          super(props);
           this.state = {
             title: '',
             artist: '',
@@ -161,17 +143,17 @@ const styles = StyleSheet.create(
   title: {
     backgroundColor: '#E91E63',
     color: '#fff',
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: 'bold',
-    paddingTop: 12,
-    paddingBottom: 5,
+    paddingTop: 8,
+    paddingBottom: 3,
     textAlign: 'center',
   },
   subTitle: {
     backgroundColor: '#E91E63',
     color: '#fff',
     fontSize: 14,
-    paddingBottom: 12,
+    paddingBottom: 8,
     textAlign: 'center',
   },
 

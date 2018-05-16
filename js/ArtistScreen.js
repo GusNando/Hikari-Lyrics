@@ -173,17 +173,17 @@ const styles = StyleSheet.create(
   title: {
     backgroundColor: '#E91E63',
     color: '#fff',
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: 'bold',
-    paddingTop: 12,
-    paddingBottom: 5,
+    paddingTop: 8,
+    paddingBottom: 3,
     textAlign: 'center',
   },
   subTitle: {
     backgroundColor: '#E91E63',
     color: '#fff',
     fontSize: 14,
-    paddingBottom: 12,
+    paddingBottom: 8,
     textAlign: 'center',
   },
   row: {

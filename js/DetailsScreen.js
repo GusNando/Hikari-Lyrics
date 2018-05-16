@@ -2,20 +2,8 @@ import React, { Component } from 'react';
 import { Alert, RefreshControl, Button, Text, View, Image, ScrollView, StyleSheet, TextInput, ActivityIndicator, StatusBar, TouchableOpacity, FlatList, List, ListItem, KeyboardAvoidingView } from 'react-native';
 import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation';
 import YouTube from 'react-native-youtube';
-//Data Screen
-class LogoTitle extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems:'center', justifyContent: 'center' }}>
-        <Image
-          source={require('./assets/spiro.png')}
-          style={{width: 30, height: 30, tintColor: '#2196F3'  }}
-        />
-      </View>
-    );
-  }
-}
-export default class DataScreen extends React.Component {
+
+export default class DetailsScreen extends React.Component {
   static navigationOptions = {
     headerTitle: null,
   };
@@ -128,7 +116,7 @@ DeleteRecord = () =>{
 
         <ScrollView>
           <YouTube
-            videoId={this.state.youtube}  // The YouTube video ID
+            videoId={''+this.state.youtube}  // The YouTube video ID
             play={false}             // control playback of video with true/false
             loop={true}             // control whether the video should loop when ended
             apiKey="AIzaSyAhGQBgdSxjgtVHPXFEMGuT5tM62opMPRw"
@@ -168,17 +156,17 @@ const styles = StyleSheet.create(
     title: {
       backgroundColor: '#E91E63',
       color: '#fff',
-      fontSize: 22,
+      fontSize: 18,
       fontWeight: 'bold',
-      paddingTop: 12,
-      paddingBottom: 5,
+      paddingTop: 8,
+      paddingBottom: 3,
       textAlign: 'center',
     },
     subTitle: {
       backgroundColor: '#E91E63',
       color: '#fff',
       fontSize: 14,
-      paddingBottom: 12,
+      paddingBottom: 8,
       textAlign: 'center',
     },
     songTitle: {

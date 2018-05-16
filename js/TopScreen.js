@@ -3,25 +3,7 @@ import { RefreshControl, Button, Text, View, Image, StyleSheet, TextInput, Activ
 import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation'; // Version can be specified in package.json
 import Icon from 'react-native-ionicons';
 
-//Data Screen
-class LogoTitle extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems:'center', justifyContent: 'center' }}>
-        <Image
-          source={require('./assets/spiro.png')}
-          style={{width: 30, height: 30, tintColor: '#2196F3'  }}
-        />
-      </View>
-    );
-  }
-}
-
-export default class DataScreen extends React.Component {
-  static navigationOptions = {
-    headerTitle: <LogoTitle />,
-  };
-
+export default class TopScreen extends React.Component {
 constructor(props) {
     super(props);
     this.state = {
@@ -95,7 +77,11 @@ GetIDFunction=(id, title, artist, album, image, youtube, lyrics)=>{
             onPress={this.GetIDFunction.bind(this, item.id, item.title, item.artist, item.album, item.image, item.youtube, item.lyrics,)} >
 
           <View style={styles.iconContainer}>
-            <Icon style={styles.icon} name="musical-notes"/>
+            <Image
+              style={{flex:1, height: 60, width: 60, borderRadius: 6}}
+              source={{uri: item.image}}
+              resizeMode="contain"
+            />
           </View>
 
           <View style={styles.info}>
@@ -137,10 +123,6 @@ const styles = StyleSheet.create(
     },
     iconContainer: {
       alignItems: 'center',
-      backgroundColor: '#00BCD4',
-      borderColor: '#00BCD4',
-      borderRadius: 6,
-      borderWidth: 1,
       justifyContent: 'center',
       height: 60,
       width: 60,
@@ -169,17 +151,17 @@ const styles = StyleSheet.create(
     title: {
       backgroundColor: '#E91E63',
       color: '#fff',
-      fontSize: 22,
+      fontSize: 18,
       fontWeight: 'bold',
-      paddingTop: 12,
-      paddingBottom: 5,
+      paddingTop: 8,
+      paddingBottom: 3,
       textAlign: 'center',
     },
     subTitle: {
       backgroundColor: '#E91E63',
       color: '#fff',
       fontSize: 14,
-      paddingBottom: 12,
+      paddingBottom: 8,
       textAlign: 'center',
     },
 });
