@@ -6,3 +6,5 @@
 ![ss](https://github.com/GusNando/Hikari-Lyrics/blob/master/screenshot/5.png)
 ![ss](https://github.com/GusNando/Hikari-Lyrics/blob/master/screenshot/6.png)
 ![ss](https://github.com/GusNando/Hikari-Lyrics/blob/master/screenshot/7.png)
+![ss](https://github.com/GusNando/Hikari-Lyrics/blob/master/screenshot/8.png)
+![ss](https://github.com/GusNando/Hikari-Lyrics/blob/master/screenshot/9.png)
