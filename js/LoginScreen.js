@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import { Alert, Button, Text, View, Image, StyleSheet, TextInput, ActivityIndicator, TouchableOpacity,KeyboardAvoidingView } from 'react-native';
 import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation';
 import { Kaede } from 'react-native-textinput-effects';
-//Home Screen
 
 class LoginScreen extends React.Component {
-  constructor()
+  constructor(props)
     {
-        super();
-
+        super(props);
         this.state = {
           username: 'admin',
           password: 'admin',
@@ -61,6 +59,7 @@ fetch('http://api.gusnando.com/login.php',
                     style={{width: 150, height: 150 }}
                   />
                </View>
+
                 <Kaede
                   placeholder = "Username"
                   label={'Username'}
@@ -72,6 +71,7 @@ fetch('http://api.gusnando.com/login.php',
                   placeholderTextColor='#FFFFFF'
                   style={{marginVertical: 10, marginHorizontal: 20}}
                 />
+
                 <Kaede
                   placeholder = "Password"
                   label={'Password'}
@@ -86,8 +86,6 @@ fetch('http://api.gusnando.com/login.php',
                   secureTextEntry
                   ref={(input) => this.passInput = input}
                   onChangeText = {(TextInputText) => this.setState({ password: TextInputText })} />
-
-
 
                 <TouchableOpacity
                   activeOpacity = { 0.5 }

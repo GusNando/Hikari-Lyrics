@@ -45,19 +45,12 @@ constructor(props) {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-
               id : this.state.id,
-
               title : this.state.title,
-
               artist : this.state.artist,
-
               album : this.state.album,
-
               image : this.state.image,
-
               youtube : this.state.youtube,
-
               lyrics: this.state.lyrics
 
             })
@@ -113,7 +106,6 @@ DeleteRecord = () =>{
         <Text style={styles.title}>HIKARI LYRICS</Text>
         <Text style={styles.subTitle}>TOP LYRICS</Text>
 
-
         <ScrollView>
           <YouTube
             videoId={''+this.state.youtube}  // The YouTube video ID
@@ -140,8 +132,7 @@ DeleteRecord = () =>{
             <Text style={{fontWeight: 'bold', textAlign: 'center', marginTop: 20}}>Original / Romaji Lyrics</Text>
             <Text style={styles.lyrics}>{this.state.lyrics}</Text>
         </ScrollView>
-   </View>
-
+      </View>
     );
   }
 }

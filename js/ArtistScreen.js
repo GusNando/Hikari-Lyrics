@@ -3,25 +3,9 @@ import { RefreshControl, Button, Text, View, Image, StyleSheet, TextInput, Scrol
 import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation'; // Version can be specified in package.json
 import Icon from 'react-native-ionicons';
 import { Kaede } from 'react-native-textinput-effects';
-//Data Screen
-class LogoTitle extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems:'center', justifyContent: 'center' }}>
-        <Image
-          source={require('./assets/spiro.png')}
-          style={{width: 30, height: 30, tintColor: '#2196F3'  }}
-        />
-      </View>
-    );
-  }
-}
 
-export default class DataScreen extends React.Component {
-  static navigationOptions = {
-    headerTitle: <LogoTitle />,
-  };
 
+export default class ArtistScreen extends React.Component {
 constructor(props) {
     super(props);
     this.state = {
@@ -156,8 +140,6 @@ GetIDFunction=(id, title, artist, album, lyrics)=>{
         }
 
         />
-
-
         </ScrollView>
    </View>
 

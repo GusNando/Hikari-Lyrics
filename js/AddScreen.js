@@ -5,7 +5,7 @@ import Icon from 'react-native-ionicons';
 
 import { Kaede } from 'react-native-textinput-effects';
 
-export default class DataScreen extends React.Component {
+export default class AddScreen extends React.Component {
     constructor(props)
       {
           super(props);
